@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {useProductsContext} from '../../hooks/useProductsContext'
@@ -55,7 +56,7 @@ const AddProducts_admin = () => {
         if (productSnapshot) formData.append('productSnapshot', productSnapshot);
         if (productFile) formData.append('productFile', productFile);
 
-        const response = await fetch('http://localhost:4000/api/endpoint/products/admin', {
+        const response = await fetch('https://doorgan-api.onrender.com/api/endpoint/products/admin', {
             method: 'POST',
             body: formData,
             headers: {

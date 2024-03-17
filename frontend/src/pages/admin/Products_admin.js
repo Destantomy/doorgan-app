@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import NavbarAdmin from '../../components/NavbarAdmin'
@@ -44,7 +45,7 @@ import { useLogout } from '../../hooks/useLogout'
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('http://localhost:4000/api/endpoint/products/admin', {
+      const response = await fetch('https://doorgan-api.onrender.com/api/endpoint/products/admin', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -54,7 +55,7 @@ import { useLogout } from '../../hooks/useLogout'
         // Map products to include imageUrl
         const productsWithImageUrls = json.map(product => ({
           ...product,
-          imageUrl: `http://localhost:4000/images/${product.productFile}`
+          imageUrl: `https://doorgan-api.onrender.com/images/${product.productFile}`
         }))
         dispatch({type: 'SET_PRODUCTS', payload: productsWithImageUrls})
       }

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {useEffect, useState} from 'react'
 import NavbarAdmin from '../../components/NavbarAdmin'
 import {useUsersContext} from '../../hooks/useUsersContext'
@@ -41,7 +42,7 @@ const Users_admin = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch('http://localhost:4000/api/endpoint/users/admin', {
+      const response = await fetch('https://doorgan-api.onrender.com/api/endpoint/users/admin', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
