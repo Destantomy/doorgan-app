@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "sources/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      { "src": "/api/auth/login/", "dest": "sources/routes/login.js" },
+      { "src": "/api/auth/signup/", "dest": "sources/routes/login.js" },
+      { "src": "/api/auth/userVerify/:id/:token", "dest": "sources/routes/login.js" },
+      { "src": "/api/endpoint/home/admin/", "dest": "sources/routes/adminHome.js" },
+      { "src": "/api/endpoint/products/admin/", "dest": "sources/routes/adminProducts.js" },
+      { "src": "/api/endpoint/products/admin/:id", "dest": "sources/routes/adminProducts.js" },
+      { "src": "/api/endpoint/users/admin/", "dest": "sources/routes/adminUser.js" },
+      { "src": "/api/endpoint/users/admin/:id", "dest": "sources/routes/adminUser.js" },
+      { "src": "/api/endpoint/products/", "dest": "sources/routes/userProducts.js" },
+      { "src": "/api/endpoint/products/:id", "dest": "sources/routes/userProducts.js" },
+      { "src": "/api/endpoint/products/payment/:id", "dest": "sources/routes/userProducts.js" },
+      { "src": "/api/endpoint/products/download/:id", "dest": "sources/routes/userProducts.js" },
+      { "src": "/(.*)", "dest": "sources/server.js" }
+    ]
+  }
