@@ -19,7 +19,7 @@
       { "src": "/api/endpoint/products/:id", "dest": "sources/routes/userProducts.js" },
       { "src": "/api/endpoint/products/payment/:id", "dest": "sources/routes/userProducts.js" },
       { "src": "/api/endpoint/products/download/:id", "dest": "sources/routes/userProducts.js" },
-      { "src": "/images/(.*)", "dest": "/sources/upload/$1" },
+      { "src": "/images/(.*)", "dest": "sources/upload/$1" },
       { "src": "/(.*)", "dest": "sources/server.js" }
     ]
   }
