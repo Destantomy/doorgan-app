@@ -37,7 +37,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Serve images from the 'upload' directory
 app.use('/images', express.static('sources/upload'));
-
 // routes
 app.use('/api/auth/', loginRoutes);
 app.use('/api/endpoint/home', getCountRoutes);
