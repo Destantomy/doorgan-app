@@ -11,7 +11,7 @@
       { "src": "/api/auth/signup/", "dest": "sources/routes/login.js" },
       { "src": "/api/auth/userVerify/:id/:token", "dest": "sources/routes/login.js" },
       { "src": "/api/endpoint/home/admin/", "dest": "sources/routes/adminHome.js" },
-      { "src": "/api/endpoint/products/admin/", "dest": "sources/routes/adminProducts.js" },
+      { "src": "/api/endpoint/products/admin", "dest": "sources/routes/adminProducts.js" },
       { "src": "/api/endpoint/products/admin/:id", "dest": "sources/routes/adminProducts.js" },
       { "src": "/api/endpoint/users/admin/", "dest": "sources/routes/adminUser.js" },
       { "src": "/api/endpoint/users/admin/:id", "dest": "sources/routes/adminUser.js" },

@@ -20,7 +20,6 @@ const corsConfig = {
 const app = express();
 const port = process.env.PORT || 3000;
 
-
 // cors
 app.use(cors(corsConfig));
 
@@ -36,7 +35,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // Serve images from the 'upload' directory
-app.use('/images', express.static('sources/upload'));
+app.use('/images', express.static('sources/upload/'));
 // routes
 app.use('/api/auth/', loginRoutes);
 app.use('/api/endpoint/home', getCountRoutes);
