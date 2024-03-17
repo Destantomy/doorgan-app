@@ -34,7 +34,7 @@ const SuccessPayment = () => {
 
   const downloadFile = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/endpoint/products/download/${productId}`, {
+      const response = await fetch(` http://localhost:4000/api/endpoint/products/download/${productId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${user.token}`,

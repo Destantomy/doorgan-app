@@ -41,7 +41,7 @@ const Users_admin = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch('http://localhost:4000/api/endpoint/users/admin/', {
+      const response = await fetch(' http://localhost:4000/api/endpoint/users/admin', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

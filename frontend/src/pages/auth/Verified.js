@@ -11,7 +11,7 @@ const Verified = () => {
 
     const verifying = async () => {
         try {
-            const url = `http://localhost:4000/api/auth/userVerify/${params.id}/${params.token}`
+            const url = ` http://localhost:4000/api/auth/userVerify/${params.id}/${params.token}`
             const {data} = await axios.get(url)
             console.log(data)
             setValidUrl(true)

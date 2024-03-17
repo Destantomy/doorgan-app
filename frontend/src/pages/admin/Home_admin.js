@@ -63,7 +63,7 @@ const generateData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/endpoint/home/admin/', {
+        const response = await fetch(' http://localhost:4000/api/endpoint/home/admin', {
           headers: {
             'Authorization': `Bearer ${user.token}`,
             'Content-Type': 'application/json',

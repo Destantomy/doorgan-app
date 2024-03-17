@@ -14,7 +14,7 @@ const ProductsTable = ({product}) => {
     if (!user) {
         return
     }
-    const response = await fetch('http://localhost:4000/api/endpoint/products/admin/' + product._id, {
+    const response = await fetch(' http://localhost:4000/api/endpoint/products/admin/' + product._id, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${user.token}`
