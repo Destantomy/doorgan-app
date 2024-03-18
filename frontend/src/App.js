@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 // landingPage
@@ -18,6 +19,10 @@ import Home from './pages/user/Home'
 import SuccessPayment from './components/SuccessPayment'
 
 function App () {
+  useEffect(() => {
+    document.title = "Doorgan Apparel ™";
+  }, [])
+
   const { user } = useAuthContext()
 
   return (

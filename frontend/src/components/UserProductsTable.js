@@ -33,17 +33,17 @@ const UserProductsTable = ({ product }) => {
           // Handle success
           console.log('payment success');
           // Redirect ke halaman success dengan menyertakan parameter product._id
-          window.location.href = `https://3990-182-0-133-121.ngrok-free.app/success/${product._id}`;
+          window.location.href = `https://doorganapparel.vercel.app/success/${product._id}`;
         },
         onPending: function () {
           // Handle pending payment
           console.log('payment pending');
-          window.location.href = `https://3990-182-0-133-121.ngrok-free.app/home`;
+          window.location.href = `https://doorganapparel.vercel.app/home`;
         },
         onError: function () {
           // Handle error
           console.log('payment error');
-          window.location.href = `https://3990-182-0-133-121.ngrok-free.app/home`;
+          window.location.href = `https://doorganapparel.vercel.app/home`;
         },
       });
     } catch (error) {

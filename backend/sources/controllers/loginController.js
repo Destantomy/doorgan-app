@@ -92,7 +92,7 @@ const signup = async (req, res) => {
         userId: user._id,
         token: `verify-${nanoid(20)}`,
       }).save();
-      const url = `http://localhost:3000/userVerify/${verifyToken.userId}/${verifyToken.token}`;
+      const url = `https://doorganapparel.vercel.app/userVerify/${verifyToken.userId}/${verifyToken.token}`;
       await sendEmail(user.email, 'Email verification', url);
       return res.status(201).json({
         email,

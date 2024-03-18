@@ -515,7 +515,7 @@ body {
 
 .user-products-wa {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   width: 95%;
   margin: 30px;
@@ -1336,8 +1336,8 @@ body {
 
   .user-products-wa {
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
     width: 95%;
     margin: 30px;
@@ -1357,7 +1357,7 @@ body {
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     border: 1px solid #aab7b8;
     border-radius: 3px;
     width: fit-content;
@@ -2151,8 +2151,8 @@ body {
 
   .user-products-wa {
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
     width: 95%;
     margin: 30px;
@@ -2903,8 +2903,8 @@ body {
 
   .user-products-wa {
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     flex-direction: column;
     width: 95%;
     margin: 30px;
