@@ -77,7 +77,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('http://localhost:4000/api/endpoint/products', {
+      const response = await fetch('https://doorgan-api.onrender.com/api/endpoint/products', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -86,7 +86,7 @@ const Home = () => {
       if (response.ok) {
         const productsWithImageUrls = json.map(product => ({
           ...product,
-          imageUrl: `http://localhost:4000/images/${product.productSnapshot}`
+          imageUrl: `https://doorgan-api.onrender.com/images/${product.productSnapshot}`
         }))
         dispatch({ type: 'SET_PRODUCTS', payload: productsWithImageUrls })
       }
