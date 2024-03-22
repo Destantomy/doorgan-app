@@ -139,6 +139,8 @@ const Home = () => {
               .map((product) => (
                 <UserProductsTable key={product._id} product={product} />
               ))
+          ) : products !== null ? (
+            <div className="alert alert-danger" role="alert">No product inserted yet</div>
           ) : (
             <Spinner
               animation="border"

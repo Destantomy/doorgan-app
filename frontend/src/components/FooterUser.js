@@ -15,6 +15,9 @@ const FooterUser = () => {
                 <p>This site was made with <FontAwesomeIcon icon={faHeart} className='user-footer-end-heart'/> & <FontAwesomeIcon icon={faCoffee}/>
                 </p>
             </div>
+            <div className="user-footer-end">
+              <p>V.1.0</p>
+            </div>
     </div>
   )
 }

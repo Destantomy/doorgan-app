@@ -10,7 +10,7 @@ const userRoutes = require('./routes/adminUser');
 const userProduct = require('./routes/userProducts');
 const cors = require('cors');
 const corsConfig = {
-  origin: '*',
+  origin: 'https://doorganapparel.vercel.app',
   methods: 'GET, POST, PUT, DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
@@ -27,7 +27,6 @@ app.use(cors(corsConfig));
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(req.path, req.method);
-  res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 });
 
