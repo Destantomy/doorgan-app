@@ -112,9 +112,13 @@ import { useLogout } from '../../hooks/useLogout'
               </div>
             </div>
             <div className="products-admin-body">
-              {currentProducts.map((product) => (
-                <ProductsTable key={product._id} product={product} />
-              ))}
+            {currentProducts.length > 0 ? (
+            currentProducts.map((product) => (
+            <ProductsTable key={product._id} product={product} />
+            ))
+            ) : (
+            <div className="alert alert-danger" role="alert" style={{marginTop: '15px'}}>No product inserted yet</div>
+            )}
             </div>
             <div className="products-admin-pagination">
             <Pagination>
