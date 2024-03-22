@@ -5,7 +5,7 @@ const uuid = require('uuid');
 const Midtrans = require('midtrans-client');
 
 const snap = new Midtrans.Snap({
-  isProduction: false,
+  isProduction: true,
   serverKey: process.env.SECRET,
   clientKey: process.env.PUBLIC_CLIENT,
 });
@@ -17,7 +17,7 @@ const getProducts = async (req, res) => {
     // Map products to include imageUrl
     const productsWithImageUrls = products.map((product) => ({
       ...product._doc,
-      imageUrl: `https://doorgan-api.onrender.com/images/${product.productSnapshot}`,
+      imageUrl: `http://localhost:4000/images/${product.productSnapshot}`,
     }));
     return res.status(200).json(productsWithImageUrls);
   } catch (error) {

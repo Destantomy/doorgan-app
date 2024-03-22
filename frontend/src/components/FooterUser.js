@@ -16,7 +16,7 @@ const FooterUser = () => {
                 </p>
             </div>
             <div className="user-footer-end">
-              <p>V.1.0</p>
+              <p>V.1.1</p>
             </div>
     </div>
   )

@@ -16,7 +16,7 @@ const UserProductsTable = ({ product }) => {
         quantity: 1,
       };
 
-      const response = await fetch(`https://doorgan-api.onrender.com/api/endpoint/products/payment/${product._id}`, {
+      const response = await fetch(`http://localhost:4000/api/endpoint/products/payment/${product._id}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${user.token}`,
