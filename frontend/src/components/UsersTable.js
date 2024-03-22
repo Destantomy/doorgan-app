@@ -14,7 +14,7 @@ const UsersTable = ({users, index}) => {
     if (!user) {
         return
     }
-    const response = await fetch('https://doorgan-api.onrender.com/api/endpoint/users/admin/' + users._id, {
+    const response = await fetch('http://localhost:4000/api/endpoint/users/admin/' + users._id, {
         method: 'DELETE',
         headers: {
             'Authorization': `Bearer ${user.token}`

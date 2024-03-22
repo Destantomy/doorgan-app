@@ -62,7 +62,7 @@ const Home = () => {
   const slicedProducts = products ? products.slice(0, element) : [];
 
   useEffect(() => {
-    const snapScript = 'https://app.sandbox.midtrans.com/snap/snap.js'
+    const snapScript = 'https://app.midtrans.com/snap/snap.js'
     const clientKey = process.env.PUBLIC_CLIENT
     const script = document.createElement('script')
     script.src = snapScript
@@ -77,7 +77,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch('https://doorgan-api.onrender.com/api/endpoint/products', {
+      const response = await fetch('http://localhost:4000/api/endpoint/products', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
@@ -86,7 +86,7 @@ const Home = () => {
       if (response.ok) {
         const productsWithImageUrls = json.map(product => ({
           ...product,
-          imageUrl: `https://doorgan-api.onrender.com/images/${product.productSnapshot}`
+          imageUrl: `http://localhost:4000/images/${product.productSnapshot}`
         }))
         dispatch({ type: 'SET_PRODUCTS', payload: productsWithImageUrls })
       }

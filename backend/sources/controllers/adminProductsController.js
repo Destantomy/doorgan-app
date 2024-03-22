@@ -50,7 +50,7 @@ const getProducts = async (req, res) => {
     // Map products to include imageUrl
     const productsWithImageUrls = products.map((product) => ({
       ...product._doc,
-      imageUrl: `https://doorgan-api.onrender.com/images/${product.productFile}`,
+      imageUrl: `http://localhost:4000/images/${product.productFile}`,
     }));
     return res.status(200).json(productsWithImageUrls);
   } catch (error) {

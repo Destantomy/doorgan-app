@@ -10,7 +10,7 @@ const userRoutes = require('./routes/adminUser');
 const userProduct = require('./routes/userProducts');
 const cors = require('cors');
 const corsConfig = {
-  origin: 'https://doorganapparel.vercel.app',
+  origin: 'http://localhost:3000',
   methods: 'GET, POST, PUT, DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
