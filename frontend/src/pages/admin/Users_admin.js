@@ -27,10 +27,10 @@ const Users_admin = () => {
       const logoutTimer = setTimeout(() => {
         const currentTime = new Date();
         const diffInMilliseconds = currentTime - lastActiveTime;
-        if (diffInMilliseconds >= 60000) {
-          logout();
-        }
-      }, 60000);
+        if (diffInMilliseconds >= 10 * 60000) {
+      logout();
+    }
+  }, 10 * 60000);
   
       return () => clearTimeout(logoutTimer);
     }, [lastActiveTime]);

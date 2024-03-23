@@ -100,10 +100,10 @@ const Home = () => {
     const logoutTimer = setTimeout(() => {
       const currentTime = new Date();
       const diffInMilliseconds = currentTime - lastActiveTime;
-      if (diffInMilliseconds >= 60000) {
-        logout();
-      }
-    }, 60000);
+      if (diffInMilliseconds >= 10 * 60000) {
+      logout();
+    }
+  }, 10 * 60000);
 
     return () => clearTimeout(logoutTimer);
   }, [lastActiveTime]);
@@ -111,6 +111,12 @@ const Home = () => {
   const handleInteraction = () => {
     setLastActiveTime(new Date());
   };
+  // connect wa
+  // const handleWhatsAppClick = () => {
+  //   const phoneNumber = 'number'
+  //   const whatsappLink = `https://wa.me/${phoneNumber}`;
+  //   window.open(whatsappLink, '_blank');
+  // }
 
   return (
     <div onClick={handleInteraction}>
