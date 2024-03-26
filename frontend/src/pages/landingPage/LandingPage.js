@@ -41,11 +41,16 @@ const LandingPage = () => {
         <div ref={ref1} className={`landing-page-body-1 ${inView1 ? 'fade-in-up' : ''}`}>
             <div className="body-1-caption">
                 <h1>Doorgan Apparel &trade;</h1>
-                <span>Sebuah platform yang dibangun untuk membantu anda dalam menemukan desain jersey.
-                    Ya, kami menyediakan dan menjual berbagai desain jersey.
-                    Kami memahami betul bahwa jersey adalah sebuah signature dari sebuah tim,
-                    yang mana dengan dimulai dari jersey semangat tim dapat meningkat dan tentu saja
-                    jersey merupakan faktor pembeda antara tim satu dengan yang lain.
+                <span>
+                    Selamat datang di platform revolusioner kami, di mana kebutuhan 
+                    akan desain jersey bertemu dengan kreativitas tak terbatas! 
+                    Kami adalah jawaban bagi Anda yang mencari lebih dari sekadar jersey biasa. 
+                    Dengan koleksi desain yang menginspirasi dan unik, kami bukan sekadar penyedia, 
+                    tapi pencipta tren baru dalam dunia jersey. 
+                    Percayakan pada kami untuk mewujudkan visi Anda, karena kami mengerti betapa pentingnya sebuah 
+                    jersey dalam mencerminkan semangat dan identitas tim Anda. 
+                    Mari buktikan bahwa keunggulan tak hanya terlihat di lapangan, 
+                    tapi juga melalui desain jersey yang memukau dari kami.
                 </span>
             </div>
             <div className="body-1-img">
