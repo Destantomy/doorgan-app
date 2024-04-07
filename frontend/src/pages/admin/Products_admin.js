@@ -55,7 +55,7 @@ import { useLogout } from '../../hooks/useLogout'
         // Map products to include imageUrl
         const productsWithImageUrls = json.map(product => ({
           ...product,
-          imageUrl: `https://doorgan-api.onrender.com/images/${product.productFile}`
+          imageUrl: `https://doorgan-api.onrender.com/images/${product.productSnapshot}`
         }))
         dispatch({type: 'SET_PRODUCTS', payload: productsWithImageUrls})
       }
