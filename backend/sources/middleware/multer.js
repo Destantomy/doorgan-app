@@ -13,11 +13,15 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-  const allowedFileTypes = ['image/jpeg', 'image/jpg', 'image/png', 'application/zip'];
-  if (allowedFileTypes.includes(file.mimetype)) {
+  const allowedFileTypes = ['image/jpeg', 'image/jpg', 'image/png', 'application/x-zip-compressed', 'application/zip'];
+  const allowedExtensions = ['.zip', '.png', '.jpeg', 'jpg'];
+  const fileExtension = path.extname(file.originalname);
+  const isValidFileType = allowedFileTypes.includes(file.mimetype);
+  const isValidFileExtension = allowedExtensions.includes(fileExtension);
+  if (isValidFileType && isValidFileExtension) {
     cb(null, true);
   } else {
-    cb(null, false);
+    cb(new Error('File type'));
   }
 };
 
